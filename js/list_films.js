@@ -7,8 +7,6 @@ $(document).ready(function() {
     $( "#sort" ).change(function() {
         $("#films").empty();
         sendRequest();
-        // console.log("sort");
-        // console.log($(this).val());
     });
 
     $( "#order" ).change(function() {
