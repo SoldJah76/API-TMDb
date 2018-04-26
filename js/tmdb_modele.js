@@ -70,33 +70,33 @@ function getListGenre() {
 }
 
 // popularity, release_date, original_title / desc, asc
-function getListMovies(sort, order, page = 1) {
-	var arrListMovies = [];
-	api_settings.url = r_listing_movie.replace("{sort}", sort + "." + order) + "&page=" + page;
-
-	$.ajax(api_settings).done(function(response){
-		$.each(response.results, function(key, movie) {
-			// On récupère la liste des genres par l'ID
-			var genre_str = "";
-			$.each(movie.genre_ids, function(key, genre_id) {
-				genre_str += arrListGenre[genre_id] + " / ";
-			})
-			genre_str = genre_str.substr(0, genre_str.length - 3);
-
-			arrListMovies.push({
-				id: movie.id,
-				title: movie.title,
-				poster: url_image_small + movie.poster_path,
-				backdrop: url_image_original + movie.backdrop_path,
-				date: movie.release_date,
-				note: movie.vote_average,
-				genre: genre_str
-			});
-		});
-		console.log(arrListMovies);
-		// return arrListMovies;
-	});
-}
+// function getListMovies(sort, order, page = 1) {
+// 	var arrListMovies = [];
+// 	api_settings.url = r_listing_movie.replace("{sort}", sort + "." + order) + "&page=" + page;
+//
+// 	$.ajax(api_settings).done(function(response){
+// 		$.each(response.results, function(key, movie) {
+// 			// On récupère la liste des genres par l'ID
+// 			var genre_str = "";
+// 			$.each(movie.genre_ids, function(key, genre_id) {
+// 				genre_str += arrListGenre[genre_id] + " / ";
+// 			})
+// 			genre_str = genre_str.substr(0, genre_str.length - 3);
+//
+// 			arrListMovies.push({
+// 				id: movie.id,
+// 				title: movie.title,
+// 				poster: url_image_small + movie.poster_path,
+// 				backdrop: url_image_original + movie.backdrop_path,
+// 				date: movie.release_date,
+// 				note: movie.vote_average,
+// 				genre: genre_str
+// 			});
+// 		});
+// 		console.log(arrListMovies);
+// 		// return arrListMovies;
+// 	});
+// }
 
 function getMovieVideo(movieId) {
 	api_settings.url = r_video_movie.replace("{movie_id}", movieId);
