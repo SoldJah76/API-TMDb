@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/tmdb_modele.js" type="text/javascript"></script>
+        <script src="js/list_films.js" type="text/javascript"></script>
+
+        <title>Liste des films</title>
+    </head>
+    <body>
+
+        <header>
+            <div id="title">
+                TP-FRONT
+            </div>
+
+            <div id="page">
+                Liste des films
+            </div>
+            <div id="search">
+                <form action="/list_films.html" method="get">
+                    <input type="text" name="search" placeholder="Rechercher">
+                    <select name="type" id="type">
+                        <option value="film">Film</option>
+                        <option value="person">Personne</option>
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a class="active" href="list_films.html">Découvrir</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+            <div id="choice">
+                <select id="sort">
+
+                    <option value="original_title">Titre</option>
+                    <option value="release_date">Date de sortie</option>
+                    <option value="popularity">Popularite</option>
+                </select>
+
+                <select id="order">
+                    <option value="asc">Croissant</option>
+                    <option value="desc">Décroissant</option>
+                </select>
+            </div>
+
+            <div id="films">
+
+            </div>
+
+        </section>
+
+    </body>
+</html>
