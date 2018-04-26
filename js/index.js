@@ -10,7 +10,7 @@ $(document).ready(function() {
             //     poster: url_image_small + movie.poster_path,
             //     backdrop: url_image_original + movie.backdrop_path
             // });
-        $('section').append('<div id="'+movie.id+'" class="poster"><img src="'+url_image_small + movie.poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></div>')
+        $('section').append('<div id="'+movie.id+'" class="poster"><a href="#"><img src="'+url_image_small + movie.poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></a></div>')
 
         });
     });
