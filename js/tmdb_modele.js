@@ -30,17 +30,17 @@ var r_search_people = "https://api.themoviedb.org/3/search/person?api_key="+api_
 var arrListGenre = [];
 
 // On instancie la liste de genres
-$.when( getListGenre() ).done(function( x ) {
-	// getListMovies("popularity", "desc");
-	// getLatestMovies(1);
-	// getMovieDetails(299536);
-	// getMovieDetails(550);
-	// getMovieVideo(299536);
-	// getSearchMovie("fight club");
-	// getSearchPerson("Chaplin");
-	// getPersonDetails(13848);
-	// getPersonDetails(287);
-});
+// $.when( getListGenre() ).done(function( x ) {
+// 	// getListMovies("popularity", "desc");
+// 	// getLatestMovies(1);
+// 	// getMovieDetails(299536);
+// 	// getMovieDetails(550);
+// 	// getMovieVideo(299536);
+// 	// getSearchMovie("fight club");
+// 	// getSearchPerson("Chaplin");
+// 	// getPersonDetails(13848);
+// 	// getPersonDetails(287);
+// });
 
 // function getLatestMovies(page = 1) {
 // 	let arrLatestMovies = [];
