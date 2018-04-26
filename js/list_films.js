@@ -1,20 +1,27 @@
 $(document).ready(function() {
 
-    $.when( getListGenre() ).done(function( x ) {
-        sendRequest();
-    });
+    console.log($_GET('type'));
 
-    $( "#sort" ).change(function() {
-        $("#films").empty();
-        sendRequest();
-        // console.log("sort");
-        // console.log($(this).val());
-    });
+    if ($_GET('type') != null) {
+        let search = $_GET('type')
+    }
+    else {
+        $.when( getListGenre() ).done(function( x ) {
+            sendRequest();
+        });
 
-    $( "#order" ).change(function() {
-        $("#films").empty();
-        sendRequest();
-    });
+        $( "#sort" ).change(function() {
+            $("#films").empty();
+            sendRequest();
+            // console.log("sort");
+            // console.log($(this).val());
+        });
+
+        $( "#order" ).change(function() {
+            $("#films").empty();
+            sendRequest();
+        });
+    }
 
     function sendRequest() {
         sort = $('#sort').val();
@@ -32,8 +39,8 @@ $(document).ready(function() {
                 });
                 genre_str = genre_str.substr(0, genre_str.length - 3);
                 overview = movie.overview;
-                if (overview === 'undefined') {
-                    overview = 'NULL';
+                if (overview === null) {
+                    overview = '';
                 }
 
                 poster_path = movie.poster_path;
