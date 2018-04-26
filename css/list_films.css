@@ -1,7 +1,7 @@
 @media screen and (min-width: 1024px) {
 	body {
 		display: grid;
-		grid-template-rows: 20% 20% 1fr;
+		grid-template-rows: 20% 20% 20% 1fr;
 	}
 
 	header {
@@ -13,120 +13,47 @@
 		display: grid;
 		list-style-type: none;
 		text-align: center;
-		grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+		grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
 	}
 
-	section {
+	#title {
+		grid-column:1;
+	}
+
+	#page {
+		grid-column:2;
+		text-align: center;
+	}
+
+	#search {
+		grid-column:3;
+		text-align: right;
+	}
+
+	li a {
+		text-decoration: none;
+	}
+
+	/*#choice {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}*/
+
+	.film {
+		display: grid;
+		grid-template-columns: 20% 1fr;
 	}
 
-	.poster > img {
+	.film .img {
+		grid-column : 1;
+	}
+
+	.img > img {
 		width: 100%;
 		height: 100%;
 	}
 
-	#title {
-		grid-column:1;
-	}
-
-	#page {
-		grid-column:2;
-		text-align: center;
-	}
-
-	#search {
-		grid-column:3;
-		text-align: right;
-	}
-
-	li a {
-		text-decoration: none;
+	.film .description {
+		grid-column : 2;
 	}
 }
-
-
-@media screen and (min-height: 630px) and (max-width: 1023px) {
-	body {
-		display: grid;
-		grid-template-rows: 20% 20% 1fr;
-	}
-
-	header {
-		display: grid;
-		grid-template-columns: 30% 30% 1fr;
-	}
-
-	nav > ul {
-		display: grid;
-		list-style-type: none;
-		text-align: center;
-		grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-	}
-
-	section {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	#title {
-		grid-column:1;
-	}
-
-	#page {
-		grid-column:2;
-		text-align: center;
-	}
-
-	#search {
-		grid-column:3;
-		text-align: right;
-	}
-
-	li a {
-		text-decoration: none;
-	}
-}
-
-@media screen and (min-height: 400px) and (max-width: 629px) {
-	body {
-		display: grid;
-		grid-template-rows: 20% 20% 1fr;
-	}
-
-	header {
-		display: grid;
-		grid-template-columns: 30% 30% 1fr;
-	}
-
-	nav > ul {
-		display: grid;
-		list-style-type: none;
-		text-align: center;
-		grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-	}
-
-	section {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-
-	#title {
-		grid-column:1;
-	}
-
-	#page {
-		grid-column:2;
-		text-align: center;
-	}
-
-	#search {
-		grid-column:3;
-		text-align: right;
-	}
-
-	li a {
-		text-decoration: none;
-	}
-}
-

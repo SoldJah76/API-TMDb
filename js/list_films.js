@@ -20,11 +20,11 @@ $(document).ready(function() {
             }
 
             $("#films").append('<div id="'+movie.id+'" class="film">' +
-                '<div class="img"><img src="'+url_image_small + movie.poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></div>' +
+                '<div class="img"><img src="'+url_image_extra_small + movie.poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></div>' +
                 '<div class="description"><div class="title">'+movie.title+'</div><div class="note">Note : '+movie.vote_average+'/10</div><div' +
                 ' class="year">'+movie.release_date+'</div><div class="genre">'+genre_str+'</div>' +
                 '<div class="overview">'+overview+'</div></div>' +
-            '</div>');
+            '</div><tr>');
 
             // arrListMovies.push({
             //     id: movie.id,

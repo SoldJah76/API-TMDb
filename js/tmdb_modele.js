@@ -12,6 +12,7 @@ var api_settings ={
 
 
 /* Liste de liens TMBD API */
+var url_image_extra_small = "https://image.tmdb.org/t/p/w200";
 var url_image_small = "https://image.tmdb.org/t/p/w300";
 var url_image_original = "https://image.tmdb.org/t/p/original";
 
