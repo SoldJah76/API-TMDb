@@ -12,7 +12,7 @@ var api_settings ={
 
 
 /* Liste de liens TMBD API */
-var url_image_small = "https://image.tmdb.org/t/p/w200";
+var url_image_small = "https://image.tmdb.org/t/p/w300";
 var url_image_original = "https://image.tmdb.org/t/p/original";
 
 var r_last_movie = "https://api.themoviedb.org/3/movie/upcoming?api_key="+api_key+"&language="+api_language;						// Dernières sorties
