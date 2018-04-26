@@ -1,3 +1,7 @@
+$color_nav : #003366;
+$color_white : white;
+
+
 @media screen and (min-width: 1024px) {
 	body {
 		display: grid;
@@ -13,7 +17,7 @@
 	    list-style-type: none;
 		text-align: center;
 		grid-template-columns: 15% 15% 1fr 1fr 1fr;
-		background-color: #003366;
+		background-color: $color_nav;
 	}
 	
 	nav > ul {
@@ -35,7 +39,7 @@
 
 	li a {
 		text-decoration: none;
-		color : white;
+		color : $color_white;
 	}
 
 	#search {
