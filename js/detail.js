@@ -50,9 +50,9 @@ $(document).ready(function() {
         //     country: country_str
         // };
 
-        $('section').append('<div class="img"><img src="'+poster+'" alt="'+response.title+'" title="'+response.title+'"></div>' +
+        $('section').append('<div class="img_description"><div class="img"><img src="'+poster+'" alt="'+response.title+'" title="'+response.title+'"></div>' +
             '<div class="description"><div class="title">'+response.title+'</div><div class="note">Note : '+response.vote_average+'/10</div><div' +
-            ' class="date">'+response.release_date+'</div><div class="producteur">'+producteur_str+'</div><div class="genre">'+genre_str+'</div><div class="country">'+country_str+'</div></div>' +
+            ' class="date">'+response.release_date+'</div><div class="producteur">'+producteur_str+'</div><div class="genre">'+genre_str+'</div><div class="country">'+country_str+'</div></div></div>' +
             '<div class="overview">'+response.overview+'</div>' +
             '<div class="video"><iframe width="420" height="315" src="'+youtube+'"></iframe></div>')
 
