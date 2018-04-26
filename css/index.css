@@ -4,18 +4,16 @@
 		grid-template-rows: 20% 1fr;
 	}
 
-<<<<<<< Updated upstream
 	header {
 		display: grid;
 		grid-template-columns: 30% 1fr;
-=======
+	}
 	nav {
 		display: grid
 	    list-style-type: none;
 		text-align: center;
 		grid-template-columns: 15% 15% 1fr 1fr 1fr;
 		background-color: #003366;
->>>>>>> Stashed changes
 	}
 	
 	nav > ul {
@@ -39,7 +37,6 @@
 		text-decoration: none;
 		color : white;
 	}
-<<<<<<< Updated upstream
 
 	#search {
 		grid-column:2;
@@ -111,9 +108,8 @@
 
 	li a {
 		text-decoration: none;
-=======
-	li a:hover
-	{
+	}
+	li a:hover {
     color : black;
 	}
 	nav{
@@ -121,7 +117,6 @@
 	}
 	ul > #search {
 		float: right;
->>>>>>> Stashed changes
 	}
 
 	section {
