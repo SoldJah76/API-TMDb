@@ -1,17 +1,14 @@
-$(document).ready(function() {
-    movieId = $_GET('id');
+$(function() {
+    let movieId = $_GET('id');
     api_settings.url = r_video_movie.replace("{movie_id}", movieId);
-
+    let youtube = '';
 
     //On récupert la vidéo
-    $.ajax(api_settings).done(function(response){
-        if (response.results.length == 0) {
-            youtube = ''
-        }
-        else {
-            find = false;
+    $.ajax(api_settings).done(function(response) {
+        if (response.results.length !== 0) {
+            let find = false;
             $.each(response.results, function(key, video) {
-                if (video.type == "Trailer" && !find) {
+                if (video.type === "Trailer" && !find) {
                     find = true;
                     youtube = '<div class="video"><iframe width="420" height="315" src="https://www.youtube.com/embed/' + video.key+'"></iframe></div>';
                 }
@@ -20,7 +17,7 @@ $(document).ready(function() {
     });
 
     api_settings.url = r_detail_movie.replace("{movie_id}", movieId);
-    $.ajax(api_settings).done(function(response){
+    $.ajax(api_settings).done(function(response) {
         let genre_str = "";
         let producteur_str = "";
         let country_str = "";
@@ -40,7 +37,7 @@ $(document).ready(function() {
         });
         country_str = country_str.substr(0, country_str.length - 3);
 
-        poster = url_image_small + response.poster_path;
+        let poster = url_image_small + response.poster_path;
 
         // objMovieDetails = {
         //     id: movieId,
@@ -61,5 +58,4 @@ $(document).ready(function() {
             '<div class="overview">'+response.overview+'</div>'+youtube)
 
     });
-
 });

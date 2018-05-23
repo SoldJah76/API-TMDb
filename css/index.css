@@ -9,7 +9,7 @@
 		grid-template-columns: 30% 1fr;
 	}
 	nav {
-		display: grid
+		display: grid;
 	    list-style-type: none;
 		text-align: center;
 		grid-template-columns: 15% 15% 1fr 1fr 1fr;
