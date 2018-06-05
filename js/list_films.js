@@ -71,7 +71,7 @@ $(function() {
         }
 
         $("#films").append('<div id="'+movie.id+'" class="film">' +
-            '<div class="img"><img src="'+poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></div>' +
+            '<a href="detail.html?id='+movie.id+'"><div class="img"><img src="'+poster_path+'" alt="'+movie.title+'" title="'+movie.title+'"></div></a>' +
             '<div class="description"><div class="title">'+movie.title+'</div><div class="note">Note : '+movie.vote_average+'/10</div><div' +
             ' class="year">'+movie.release_date+'</div><div class="genre">'+genre_str+'</div>' +
             '<div class="overview">'+overview+'</div></div>' +

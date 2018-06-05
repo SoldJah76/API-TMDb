@@ -39,23 +39,10 @@ $(function() {
 
         let poster = url_image_small + response.poster_path;
 
-        // objMovieDetails = {
-        //     id: movieId,
-        //     title: response.title,
-        //     overview: response.overview,
-        //     date: response.release_date,
-        //     poster: url_image_small + response.poster_path,
-        //     backdrop: url_image_original + response.backdrop_path,
-        //     genre: genre_str,
-        //     budget: response.budget,
-        //     producteur: producteur_str,
-        //     country: country_str
-        // };
-
         $('section').append('<div class="img_description"><div class="img"><img src="'+poster+'" alt="'+response.title+'" title="'+response.title+'"></div>' +
             '<div class="description"><div class="title">'+response.title+'</div><div class="note">Note : '+response.vote_average+'/10</div><div' +
-            ' class="date">'+response.release_date+'</div><div class="producteur">'+producteur_str+'</div><div class="genre">'+genre_str+'</div><div class="country">'+country_str+'</div></div></div>' +
-            '<div class="overview">'+response.overview+'</div>'+youtube)
+            ' class="date">'+response.release_date+'</div><div class="producteur">'+producteur_str+'</div><div class="genre">'+genre_str+'</div><div class="country">'+country_str+'</div>' +
+            '<div class="overview">'+response.overview+'</div>'+youtube+'</div></div>')
 
     });
 });

@@ -4,29 +4,28 @@
 		grid-template-rows: 20% 20% 20% 20% 1fr;
 	}
 
-	header {
+	nav {
 		display: grid;
-		grid-template-columns: 30% 1fr;
+		list-style-type: none;
+		text-align: center;
+		background-color: #003366;
 	}
 
 	nav > ul {
 		display: grid;
 		list-style-type: none;
 		text-align: center;
-		grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
-	}
-
-	#title {
-		grid-column:1;
-	}
-
-	#search {
-		grid-column:2;
-		text-align: right;
+		grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
 	}
 
 	li a {
 		text-decoration: none;
+		color : white;
+	}
+
+	form {
+		grid-column: 2;
+		text-align: center;
 	}
 
 	section {
@@ -37,9 +36,20 @@
 	.img_description {
 		display: grid;
 		grid-template-columns: 30% 1fr;
+		margin-top: 2%;
+	}
+
+	.description {
+		margin: 1%;
+	}
+
+	.overview {
+		margin-top: 1%;
+		text-align: justify;
 	}
 
 	.video {
+		margin-top: 20px;
 		text-align: center;
 	}
 
@@ -55,29 +65,28 @@
 		grid-template-rows: 20% 20% 20% 20% 1fr;
 	}
 
-	header {
+	nav {
 		display: grid;
-		grid-template-columns: 30% 1fr;
+		list-style-type: none;
+		text-align: center;
+		background-color: #003366;
 	}
 
 	nav > ul {
 		display: grid;
 		list-style-type: none;
 		text-align: center;
-		grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
-	}
-
-	#title {
-		grid-column:1;
-	}
-
-	#search {
-		grid-column:2;
-		text-align: right;
+		grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
 	}
 
 	li a {
 		text-decoration: none;
+		color : white;
+	}
+
+	form {
+		grid-column:2;
+		text-align: center;
 	}
 
 	section {
@@ -87,10 +96,21 @@
 
 	.img_description {
 		display: grid;
-		grid-template-columns: 30% 1fr;
+		grid-template-columns: 40% 1fr;
+		margin-top: 2%;
+	}
+
+	.description {
+		margin: 1%;
+	}
+
+	.overview {
+		margin-top: 1%;
+		text-align: justify;
 	}
 
 	.video {
+		margin-top: 20px;
 		text-align: center;
 	}
 
@@ -106,22 +126,26 @@
 		grid-template-rows: 25% 25% 25% 1fr;
 	}
 
+	nav {
+		display: grid;
+		list-style-type: none;
+		text-align: center;
+		background-color: #003366;
+	}
+
 	nav > ul {
 		list-style-type: none;
 		text-align: center;
-		padding: 0px;
-	}
-
-	#title {
-		text-align: center;
-	}
-
-	#search {
-		text-align: center;
+		padding: 0;
 	}
 
 	li a {
 		text-decoration: none;
+		color : white;
+	}
+
+	form {
+		text-align: center;
 	}
 
 	section {
@@ -131,15 +155,31 @@
 
 	.img_description {
 		display: grid;
-		grid-template-columns: 30% 1fr;
+		grid-template-rows: 100% 100% 1fr;
+		margin-top: 2%;
+	}
+
+	.description {
+		margin: 1%;
+	}
+
+	.overview {
+		margin-top: 1%;
+		text-align: justify;
 	}
 
 	.video {
+		margin-top: 20px;
 		text-align: center;
 	}
-	
+
+	.img {
+		grid-template-columns: 75% 1fr;
+		text-align: center;
+	}
+
 	.img > img {
-		width: 100%;
+		width: 50%;
 		height: 100%;
 	}
 }
